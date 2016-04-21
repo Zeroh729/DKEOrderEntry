@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="zeroh720.dkeorderentry.fragment.HomeFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/AppTheme">
+
+    </android.support.v7.widget.Toolbar>
+
+    <Button
+        android:id="@+id/btn_scanbarcode"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:text="Scan Barcode"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_transHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_scanbarcode"
+        tools:listitem="@layout/row_transhistory"
+        android:layout_below="@id/toolbar"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_nodata"
+        android:layout_alignTop="@id/rv_transHistory"
+        android:layout_alignBottom="@id/rv_transHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="no data"
+        android:gravity="center"
+        />
+
+</RelativeLayout>
