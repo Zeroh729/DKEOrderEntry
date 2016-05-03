@@ -1,40 +1,45 @@
 package zeroh720.dkeorderentry.model;
 
+import java.util.HashMap;
+
 public class TransactionHistory {
-    String merchandiserId;
-    String merchandiserName;
+    String id;
+    String merchId;
+    String name;
     String branch;
-    String productId;
-    String productName;
-    String productCode;
-    String quantity;
-    String transDate;
+    long time;
+    String status;
+    HashMap<String, HashMap> items;
 
     public TransactionHistory() {
     }
 
-    public String getQuantity() {
-        return quantity;
+    public enum StatusStates{
+        pending, cancelled, deliveryConfirmed, deliveryCancelled, returned
     }
 
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
+    public String getId() {
+        return id;
     }
 
-    public String getMerchandiserId() {
-        return merchandiserId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void setMerchandiserId(String merchandiserId) {
-        this.merchandiserId = merchandiserId;
+    public String getMerchId() {
+        return merchId;
     }
 
-    public String getMerchandiserName() {
-        return merchandiserName;
+    public void setMerchId(String merchId) {
+        this.merchId = merchId;
     }
 
-    public void setMerchandiserName(String merchandiserName) {
-        this.merchandiserName = merchandiserName;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getBranch() {
@@ -45,35 +50,27 @@ public class TransactionHistory {
         this.branch = branch;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getStatus() {
+        return status;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public String getProductName() {
-        return productName;
+    public long getTime() {
+        return time;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setTime(long time) {
+        this.time = time;
     }
 
-    public String getProductCode() {
-        return productCode;
+    public HashMap<String, HashMap> getItems() {
+        return items;
     }
 
-    public void setProductCode(String productCode) {
-        this.productCode = productCode;
-    }
-
-    public String getTransDate() {
-        return transDate;
-    }
-
-    public void setTransDate(String transDate) {
-        this.transDate = transDate;
+    public void setItems(HashMap<String, HashMap> items) {
+        this.items = items;
     }
 }

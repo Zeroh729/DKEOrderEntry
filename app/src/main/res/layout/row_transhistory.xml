@@ -1,35 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_view"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="90dp"
-    android:layout_margin="10dp">
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/cardMargin">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/cardPadding">
 
         <TextView
-            android:id="@+id/tv_productname"
+            android:id="@+id/tv_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Coke"/>
+            android:layout_marginBottom="12dp"
+            android:textColor="@android:color/black"
+            android:text="September 31"
+            android:textSize="26sp"/>
 
         <TextView
-            android:id="@+id/tv_quantity"
+            android:id="@+id/tv_date_sub1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Qty: 15"/>
-    </LinearLayout>
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="12dp"
+            android:text="Thursday, 2 days ago"/>
 
-    <TextView
-        android:id="@+id/tv_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="April 21, 2016"
-        android:layout_margin="16dp"
-        android:layout_gravity="bottom|right"/>
+        <TextView
+            android:id="@+id/tv_date_sub2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_date_sub1"
+            android:layout_marginLeft="12dp"
+            android:text="3:00pm"/>
+
+        <LinearLayout
+            android:id="@+id/ll_orderentries"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:showDividers="middle"
+            android:divider="?android:attr/listDivider"
+            android:layout_below="@id/tv_date"/>
+
+        <Button
+            android:id="@+id/btn_cancelOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/ll_orderentries"
+            android:text="Cancel Order"/>
+    </RelativeLayout>
 
 </android.support.v7.widget.CardView>

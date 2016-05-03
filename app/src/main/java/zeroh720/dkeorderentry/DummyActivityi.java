@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
 
 import java.util.HashMap;
 
@@ -22,12 +23,205 @@ public class DummyActivityi extends Activity {
         HashMap map;
 
         map = new HashMap();
-        map.put("code", "4809010701374");
-        map.put("name", "LYONS JASMIN TEA 40g e");
-        map.put("qty", "5000");
-        firebaseRef.child(DbConstants.Col_Product).push().setValue(map);
+        map.put("branch", "Easy Day Shop Makati");
+        map.put("merchId", "583982e5-0b8b-422c-9c57-708dab17e6b3");
+        map.put("name", "Shiela Garcia");
+        map.put("time", "1461685620000");
+        firebaseRef.child(DbConstants.Col_TransHistory).push().setValue(map, new Firebase.CompletionListener() {
+            @Override
+            public void onComplete(FirebaseError firebaseError, Firebase firebase) {
+                HashMap map2;
 
-        return;
+                map2 = new HashMap();
+                map2.put("code", "4800195033793");
+                map2.put("name", "LEGO OVAL VACUUM LUNCH BOX 900ML");
+                map2.put("qty", "10");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195033823");
+                map2.put("name", "D.W. BAMBOO WOK BRUSH");
+                map2.put("qty", "20");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195036145");
+                map2.put("name", "BIG ORANGE WATER BOTTLE 550ML #2802");
+                map2.put("qty", "30");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195036251");
+                map2.put("name", "D.W. NYLON ROUND FRUIT BASKET - XL");
+                map2.put("qty", "15");
+                firebase.child("items").push().setValue(map2);
+            }
+        });
+
+
+        //2
+        map = new HashMap();
+        map.put("branch", "Ever Supermarket Makati");
+        map.put("merchId", "2594c038-98ac-45ef-a99d-37b4ed359fcc");
+        map.put("name", "Alvin O. Diyan");
+        map.put("time", "1461696960000");
+        firebaseRef.child(DbConstants.Col_TransHistory).push().setValue(map, new Firebase.CompletionListener() {
+            @Override
+            public void onComplete(FirebaseError firebaseError, Firebase firebase) {
+                HashMap map2;
+
+                map2 = new HashMap();
+                map2.put("code", "4800195033793");
+                map2.put("name", "LEGO OVAL VACUUM LUNCH BOX 900ML");
+                map2.put("qty", "11");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195033830");
+                map2.put("name", "D.W. ROYAL S/S HEAVY DUTY RD. POT HOLDER-16CM");
+                map2.put("qty", "25");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195071269");
+                map2.put("name", "D.W. ROYAL S/S FAST ELECT. CUP 16CM");
+                map2.put("qty", "10");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195036251");
+                map2.put("name", "D.W. NYLON ROUND FRUIT BASKET - XL");
+                map2.put("qty", "13");
+                firebase.child("items").push().setValue(map2);
+            }
+        });
+
+
+
+        //3
+        map = new HashMap();
+        map.put("branch", "South Supermarket Makati");
+        map.put("merchId", "c61f6b0c-f7bd-4d83-bbec-e3f65b7fb0a5");
+        map.put("name", "Ross Sedillan");
+        map.put("time", "1461528060000");
+        firebaseRef.child(DbConstants.Col_TransHistory).push().setValue(map, new Firebase.CompletionListener() {
+            @Override
+            public void onComplete(FirebaseError firebaseError, Firebase firebase) {
+                HashMap map2;
+
+                map2 = new HashMap();
+                map2.put("code", "4800195033793");
+                map2.put("name", "LEGO OVAL VACUUM LUNCH BOX 900ML");
+                map2.put("qty", "15");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195033830");
+                map2.put("name", "D.W. ROYAL S/S HEAVY DUTY RD. POT HOLDER-16CM");
+                map2.put("qty", "28");
+                firebase.child("items").push().setValue(map2);
+            }
+        });
+
+
+
+        //4
+        map = new HashMap();
+        map.put("branch", "Super 8 Grocery");
+        map.put("merchId", "cca8f293-f2fc-4a3c-b93e-bac1513e680e");
+        map.put("name", "Mirie An Cepeno");
+        map.put("time", "1461501420000");
+        firebaseRef.child(DbConstants.Col_TransHistory).push().setValue(map, new Firebase.CompletionListener() {
+            @Override
+            public void onComplete(FirebaseError firebaseError, Firebase firebase) {
+                HashMap map2;
+
+                map2 = new HashMap();
+                map2.put("code", "4800195071771");
+                map2.put("name", "D.W. PEARL STAINLESS COVER KNOBS");
+                map2.put("qty", "15");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195034974");
+                map2.put("name", "PORCELAIN PIGGY SAVING BANK 5\"");
+                map2.put("qty", "28");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195070989");
+                map2.put("name", "D.W. ROYAL S/S ELEC. HEATING CUP 12CM");
+                map2.put("qty", "42");
+                firebase.child("items").push().setValue(map2);
+            }
+        });
+
+
+
+        //5
+        map = new HashMap();
+        map.put("branch", "South Supermarket Makati");
+        map.put("merchId", "c61f6b0c-f7bd-4d83-bbec-e3f65b7fb0a5");
+        map.put("name", "Ross Sedilla");
+        map.put("time", "1461698280000");
+        firebaseRef.child(DbConstants.Col_TransHistory).push().setValue(map, new Firebase.CompletionListener() {
+            @Override
+            public void onComplete(FirebaseError firebaseError, Firebase firebase) {
+                HashMap map2;
+
+                map2 = new HashMap();
+                map2.put("code", "4800195033793");
+                map2.put("name", "LEGO OVAL VACUUM LUNCH BOX 900ML");
+                map2.put("qty", "18");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195034974");
+                map2.put("name", "PORCELAIN PIGGY SAVING BANK 5\"");
+                map2.put("qty", "38");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195070989");
+                map2.put("name", "D.W. ROYAL S/S ELEC. HEATING CUP 12CM");
+                map2.put("qty", "52");
+                firebase.child("items").push().setValue(map2);
+            }
+        });
+
+
+
+        //6
+        map = new HashMap();
+        map.put("branch", "Puregold Price Club Makati");
+        map.put("merchId", "603318e4-9442-4353-afab-9cfd55007f73");
+        map.put("name", "Sam Brian Maglipon");
+        map.put("time", "1461698280000");
+        firebaseRef.child(DbConstants.Col_TransHistory).push().setValue(map, new Firebase.CompletionListener() {
+            @Override
+            public void onComplete(FirebaseError firebaseError, Firebase firebase) {
+                HashMap map2;
+
+                map2 = new HashMap();
+                map2.put("code", "4800195035064");
+                map2.put("name", "BOTTLE SCOURING SPONGE W/HDLE");
+                map2.put("qty", "20");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195034974");
+                map2.put("name", "PORCELAIN PIGGY SAVING BANK 5\"");
+                map2.put("qty", "38");
+                firebase.child("items").push().setValue(map2);
+
+                map2 = new HashMap();
+                map2.put("code", "4800195070989");
+                map2.put("name", "D.W. ROYAL S/S ELEC. HEATING CUP 12CM");
+                map2.put("qty", "52");
+                firebase.child("items").push().setValue(map2);
+            }
+        });
+
 
 /*
         map = new HashMap();

@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
+        android:subtitleTextColor="@android:color/white"
         app:theme="@style/AppTheme">
 
     </android.support.v7.widget.Toolbar>
@@ -21,7 +22,7 @@
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:layout_marginTop="6dp"
-        android:text="Scan Barcode"/>
+        android:text="Add Transaction Request"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_transHistory"
@@ -33,6 +34,15 @@
         >
     </android.support.v7.widget.RecyclerView>
 
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_marginTop="8dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerInParent="true"
+        />
+
     <TextView
         android:id="@+id/tv_nodata"
         android:layout_alignTop="@id/rv_transHistory"
@@ -40,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="no data"
+        android:visibility="gone"
         android:gravity="center"
         />
 
